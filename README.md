@@ -1,14 +1,14 @@
 get_items
 =====
 
-An escript
+A shoddily written Webserver, designed to provide Recipe Breakdowns for Minecraft
+
+Usage
+-----
+- Add recipes to `priv/sys.config`
+- Navigate to the URL (`$hostname:9090`)
 
 Build
 -----
 
-    $ rebar3 escriptize
-
-Run
----
-
-    $ _build/default/bin/get_items
+    $ ./rebar3 compile
