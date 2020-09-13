@@ -1,0 +1,17 @@
+{application, get_items, [
+    {description, "Webserver to retrieve Minecraft Item Breakdowns"},
+    {vsn, "0.1.0"},
+    {registered, []},
+    {mod, {get_items_app, []}},
+    {applications, [
+        kernel, 
+        stdlib,
+        ranch,
+        lager
+    ]},
+    {env,[]},
+    {modules, []},
+    
+    {licenses, ["Apache 2.0"]},
+    {links, []}
+]}.

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+        <title>Get Items</title>
+    
+        <link href="css/bootstrap-4.5.2/bootstrap.min.css" rel="stylesheet">
+        <link href="css/get_items.css" rel="stylesheet">
+
+        <script src="js/jquery-3.5.1/jquery.min.js"></script>
+        <script src="js/bootstrap-4.5.2/bootstrap.min.js"></script>
+        <script type="module" src="js/get_items.js"></script>
+    </head>
+    <body>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="page-header">
+                        <h1 class="display-1">Get Items</h1>
+                    </div>
+                    <hr/>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                </div>
+                <div class="col-md-4">
+                    <form id="form-request" role="form" onsubmit="return false;">
+                        <div class="form-group">
+<!--                            <label for="input-item_name">-->
+<!--                                Item Name-->
+<!--                            </label>-->
+                            <div class="row">
+                                <div class="col-md d-flex justify-content-center">
+                                    <input id="input-item_name" type="text" class="form-control mr-1" name="item" placeholder="Item Name">
+                                    <input type="number" id="input-item_quantity" class="form-control ml-1 mr-1" name="quantity" value="1" min="1" oninput="this.value = Math.abs(this.value)">
+                                    <button type="submit" class="btn btn-primary ml-1">
+                                        Breakdown
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                    <script>
+                        $("#form-request").on("submit", event => $get_items.onSubmitForm(event, "#pre-recipe_breakdown"));
+                    </script>
+                </div>
+                <div class="col-md-4">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md d-flex justify-content-center">
+                    <pre id="pre-recipe_breakdown"></pre>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
